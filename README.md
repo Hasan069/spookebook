@@ -1,1 +1,1 @@
-This app is for the people who wants to be ghosts in real life
+This app is for the people who wants to be ghosts in real life. 
