@@ -1,3 +1,5 @@
+import sendButton from "./assets/icons/send-button.svg"
+
 function App() {
   return (
     <body className="text-lg font-semibold">
@@ -39,8 +41,16 @@ function App() {
           </div>
         </div>
 
-        <div class="right-side" className="border-2 border-black rounded-lg p-2 h-20 w-3/4 fixed bottom-0 right-0 bg-new text text-neutral-50 pt-2 my-2">
-          Go Ahead! 👍🏼
+        <div>
+          <div class="right-side" className="border-2 border-black rounded-lg p-2 h-20 w-3/4 fixed bottom-0 right-0 bg-new text text-neutral-50 pt-2 my-2 indent-8 text-center text-3xl">
+            Go Ahead! 👍🏼
+            <div class="Send button" className="">
+          <img className="fixed right-2 bottom-5" style={{width: "50px"}} src={sendButton} alt="ERROR"></img>
+          </div>
+
+          </div>
+
+          
         </div>
       </div>
 
