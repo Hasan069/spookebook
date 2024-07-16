@@ -1,7 +1,7 @@
 function App() {
   return (
-    <body>
-      <div className="h-24 flex justify-between m-2 p-2 border-2 border-purple-700 rounded-lg">
+    <body className="text-lg font-semibold">
+      <div class="heading" className="h-24 flex justify-between m-2 p-2 border-2 border-purple-700 rounded-lg">
         <div className="w-1/4 border-2 border-black rounded-lg p-2 bg-new text-neutral-50">
           Messege
         </div>
@@ -9,14 +9,39 @@ function App() {
           Hasan
         </div>
       </div>
-      
-      <div className="flex justify-between">
-      <div className="m-2 p-2 h-20 w-1/3 bg-new rounded-lg align-middle text-neutral-50  ">
-        Tanvir
-      </div>
-      <div>
-        Go Ahead! 👍🏼
-      </div>
+
+      <div class="main body" className="flex justify-between p-2">
+
+        <div class="left-side" className="w-1/4 border-2 border-black rounded-lg text-wrap">
+          <div className="m-2 p-2 h-20 bg-new rounded-lg align-middle text-neutral-50 ">
+            Tanvir
+          </div>
+          <div className="m-2 p-2 h-20  bg-new rounded-lg align-middle text-neutral-50  ">
+            Hasan
+          </div>
+          <div className="m-2 p-2 h-20 bg-new rounded-lg align-middle text-neutral-50  ">
+            Serazy
+          </div>
+          <div className="m-2 p-2 h-20 bg-new rounded-lg align-middle text-neutral-50  ">
+            Shihab
+          </div>
+          <div className="m-2 p-2 h-20 bg-new rounded-lg align-middle text-neutral-50  ">
+            Fuchka
+          </div>
+          <div className="m-2 p-2 h-20 bg-new rounded-lg align-middle text-neutral-50  ">
+            Tel
+          </div>
+          <div className="m-2 p-2 h-20 bg-new rounded-lg align-middle text-neutral-50  ">
+            Moon
+          </div>
+          <div className="m-2 p-2 h-20 bg-new rounded-lg align-middle text-neutral-50  ">
+            Sun
+          </div>
+        </div>
+
+        <div class="right-side" className="border-2 border-black rounded-lg p-2 h-20 w-3/4 fixed bottom-0 right-0 bg-new text text-neutral-50 pt-2 my-2">
+          Go Ahead! 👍🏼
+        </div>
       </div>
 
     </body>
