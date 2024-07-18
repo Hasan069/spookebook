@@ -9,6 +9,10 @@ module.exports = {
       colors: {
         new: '#5133A7',
       },
+
+      fontFamily: {
+        Roboto: ["Roboto", "sans-serif"], 
+      },
     },
   },
   plugins: [],
