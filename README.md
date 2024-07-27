@@ -1,1 +1,2 @@
-This app is for the people who wants to be ghosts in real life. 
+Spookebook is a personal project of mine by which I am trying to make a clone of messneger like app. I will be diployed and people would be able to use it freely and chat easily with there loving once. Hoping to learn about MERN stack as much as I can. keep me in your prayers. 
+Enjoy ✌🏼
