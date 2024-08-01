@@ -1,12 +1,14 @@
 import React from "react";
-import { FaUser, FaUnlock } from "react-icons/fa";
+import LoginPage from "./pages/home/login/LoginPage";
+import SignupPage from "./pages/home/signup/SignupPage";
+
 // import LoginPage from "/Users/Cyanider/Desktop/spookebook/src/LoginPage";
 
 
 function app() {
   return (
     <body>
-      <h1>hello world</h1>
+      <SignupPage/>
     </body>
   )
 };
