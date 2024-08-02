@@ -38,18 +38,32 @@ const SignupPage = () => {
                         <FaUnlock class="icon " className="absolute right-[43%] top-2/ -translate-y-11" />
                     </div>
 
-
-
                     <button type="submit" className="w-full h-11 bg-white border-none outline-none text-gray-700 rounded-3xl shadow-sm cursor-pointer font-semibold ">Register</button>
 
-                    <div class="signup-with-facebook-google" className='flex m-2' >
-                        <div class="items-center justify-center h-1 dark:bg-gray-800">
-                            <button class="px-4 py-2 border flex gap-2 border-slate-200 dark:border-slate-700 rounded-lg text-slate-700 dark:text-slate-200 hover:border-slate-400 dark:hover:border-slate-500  hover:shadow transition duration-150 hover:bg-white hover:text-black">
+
+                    <div className="gender flex m-4 gap-5">
+                        <div className='form-control'>
+                            <label className="label gap-2 cursor-pointer">
+                                <span className="label-text">Male  </span>
+                                <input type="checkbox" className="h-6 w-6 border-2 border-white rounded-3xl" />
+                            </label>
+                        </div>
+                        <div className='form-control'>
+                            <label className="label gap-2 cursor-pointer">
+                                <span className="label-text ">Female  </span>
+                                <input type="checkbox" className="h-6 w-6 border-2 border-white rounded-3xl" />
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="signup-with-facebook-google" className="flex m-2}" >
+                        <div class="items-center justify-center h-1">
+                            <button class=" px-4 py-2 border flex gap-2 border-slate-200 dark:border-slate-700 rounded-lg text-slate-700 dark:text-slate-200 hover:border-slate-400 dark:hover:border-slate-500  hover:shadow transition duration-150 hover:bg-white hover:text-black">
                                 <img class="w-6 h-10" src="https://www.svgrepo.com/show/475656/google-color.svg" loading="lazy" alt="google logo" />
                                 <span>Login with Google</span>
                             </button>
                         </div>
-                        <button type="button" class="py-2 px-4 w-auto border border-slate-700 flex justify-center items-center  hover:bg-blue-700  focus:ring-blue-500 focus:ring-offset-blue-200 text-white transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 rounded-lg">
+                        <button type="button" class="py-2 px-4 w-auto border border-slate-700 flex justify-center items-center  hover:bg-white hover:text-black focus:ring-blue-500 focus:ring-offset-blue-200 text-white transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 rounded-lg">
                             <svg width="20" height="20" fill="currentColor" class="mr-2" viewBox="0 0 1792 1792" color='blue' xmlns="http://www.w3.org/2000/svg">
                                 <path d="M1343 12v264h-157q-86 0-116 36t-30 108v189h293l-39 296h-254v759h-306v-759h-255v-296h255v-218q0-186 104-288.5t277-102.5q147 0 228 12z"></path>
                             </svg>
