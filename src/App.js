@@ -1,16 +1,15 @@
 import React from "react";
 import LoginPage from "./pages/home/login/LoginPage";
 import SignupPage from "./pages/home/signup/SignupPage";
-import home from "./pages/home/home";
+import Home from "./pages/home/Home";
 
-// import LoginPage from "/Users/Cyanider/Desktop/spookebook/src/LoginPage";
 
 
 function app() {
   return (
-    <body>
-      <home/>
-    </body>
+    <div className="p-4 flex items-center justify-center h-64 ">
+      <Home/>
+    </div>
   )
 };
 
