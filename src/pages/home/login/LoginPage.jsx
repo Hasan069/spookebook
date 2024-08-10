@@ -1,4 +1,4 @@
-import React from "react";
+
 import { FaUser, FaUnlock } from "react-icons/fa";
 
 const LoginPage = () => {

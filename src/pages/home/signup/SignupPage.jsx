@@ -1,4 +1,4 @@
-import React from 'react'
+
 import { FaUser, FaUnlock } from "react-icons/fa";
 import { IoMailUnreadSharp } from "react-icons/io5";
 const SignupPage = () => {
