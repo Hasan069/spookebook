@@ -11,10 +11,10 @@ const Message = () => {
                 </div>
                 <div class="flex flex-col w-full min-w-[420px] max-w-[420px] leading-1.5 p-4 border-gray-200 bg-orange-800 rounded-e-3xl rounded-es-3xl ">
                     <div class="flex items-center space-x-2 rtl:space-x-reverse ">
-                        <span class="text-sm font-semibold text-gray-900 dark:text-white">Tanvir Hasan Serazy</span>
+                        <span class="text-sm font-semibold text-gray-900 dark:text-white hover:text-black">Tanvir Hasan Serazy</span>
                         <span class="text-sm font-normal  dark:text-gray-400">11:46</span>
                     </div>
-                    <p class="text-sm font-normal py-2.5 text-gray-900 dark:text-white text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Est ea vero quia hic necessitatibus, iure repellat doloribus doloremque quo at nihil sed exercitationem aut rerum fugit iusto neque mollitia. Incidunt excepturi cumque officia necessitatibus corporis? Mollitia iure eaque neque aspernatur. Voluptas amet porro similique illo! </p>
+                    <p class="text-sm font-normal py-2.5 text-gray-900 dark:text-white text-justify">Press Win_key + : for Emojis 🐸</p>
                     <span class="text-sm font-normal text-gray-500 dark:text-gray-400">Delivered</span>
                 </div>
             </div>
