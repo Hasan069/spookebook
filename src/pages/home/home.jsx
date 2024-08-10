@@ -1,12 +1,11 @@
 import Sidebar from "../components/sidebar/Sidebar"
-import MessegeContainer from "../components/messeges/MessegeContainer";
-
+import MessegaContainer from "../components/messages/MessageContainer";
 const Home = () => {
   return (
-    <div className=" flex rounded-lg bg-clip-padding p-1 backdrop-filter backdrop-blur-lg bg-opacity-50">
+    <div className=" flex rounded-lg bg-clip-padding p-1 backdrop-filter backdrop-blur-lg bg-opacity-50 max-h-[80vh] ">
 
       <Sidebar />
-      <MessegeContainer/>
+      <MessegaContainer/>
     </div>
   )
 
