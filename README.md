@@ -1,2 +1,0 @@
-Spookebook is a personal project of mine by which I am trying to make a clone of messneger like app. I will be diployed and people would be able to use it freely and chat easily with there loving once. Hoping to learn about MERN stack as much as I can. keep me in your prayers. 
-Enjoy ✌🏼
