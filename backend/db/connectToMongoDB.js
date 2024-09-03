@@ -1,5 +1,4 @@
 import mongoose from "mongoose";
-import dotenv from "dotenv";
 
 const connectToMongoDB = async () => {
   try {
@@ -14,3 +13,4 @@ export default connectToMongoDB;
 
 // await mongoose.connect("mongodb+srv://amihasan420:tjjI8pHVHAOo7yHS@cluster0.ruehj.mongodb.net/spookebook?retryWrites=true&w=majority&appName=Cluster0");
 // dotenv.config({ path: ".env" });
+// import dotenv from "dotenv";
