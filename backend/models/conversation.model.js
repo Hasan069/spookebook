@@ -1,4 +1,3 @@
-import { timeStamp } from "console";
 import mongoose, { mongo } from "mongoose";
 
 const conversationSchema = new mongoose.Schema(
@@ -12,7 +11,7 @@ const conversationSchema = new mongoose.Schema(
     messages: [
       {
         type: mongoose.Schema.Types.ObjectId,
-        ref: "User",
+        ref: "Message",
         default: [],
       },
     ],
@@ -20,6 +19,6 @@ const conversationSchema = new mongoose.Schema(
   { timestamps: true }
 );
 
-const Conversation = mongoose.model("conversatin", conversationSchema);
+const Conversation = mongoose.model("conversation", conversationSchema);
 
 export default Conversation;

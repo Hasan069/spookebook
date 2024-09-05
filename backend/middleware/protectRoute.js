@@ -1,5 +1,5 @@
 import jwt from "jsonwebtoken";
-import User from "../models/user.model";
+import User from "../models/user.model.js";
 
 const protectRoute = async (req, res, next) => {
   try {
@@ -7,7 +7,7 @@ const protectRoute = async (req, res, next) => {
     if (!token) {
       return res.status(401).json({ error: "unauthories - no token provided" });
     }
-    const decoded = jwt.varify(token, process.env.JWT_SECRET);
+    const decoded = jwt.verify(token, process.env.JWT_SECRET);
 
     if (!decoded) {
       return res.status(401).json({ error: "unauthories - invalid token" });
@@ -18,16 +18,12 @@ const protectRoute = async (req, res, next) => {
     if (!user) {
       return res.status(404).json({ error: "no user found" });
     }
-
     req.user = user;
-
     next();
-
   } catch (error) {
     console.log("error in the protectRoute middleware: ", error.message);
-    res.status(500).json({ error: "internal servre error" });
+    res.status(500).json({ error: "internal server error" });
   }
 };
-
 
 export default protectRoute;
