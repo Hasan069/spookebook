@@ -3,9 +3,9 @@ import Login from "./pages/login/Login";
 import SignUp from "./pages/signup/signUp";
 function App() {
   return (
-    <div className="p-4 h-screen w-full items-center justify-center">
+    <div className="font-Roboto p-4  h-screen w-full  items-center justify-center">
+      <SignUp/> 
       {/* <Login/> */}
-      <SignUp/>
     </div>
   );
 }

@@ -2,10 +2,10 @@ import { FaUser, FaUnlock } from "react-icons/fa";
 import { IoMailUnreadSharp } from "react-icons/io5";
 const SignUp = () => {
   return (
-    <body className="font-Roboto font-semibold m-0 p-0 box-border flex justify-center items-center min-h-screen bg-cover bg-center bg-no-repeat ">
+    <body className="font-semibold m-0 p-0 box-border flex justify-center items-center min-h-screen bg-cover bg-center  ">
       <div
         class="wrapper"
-        className="w-1/4 bg-transparent text-white rounded-xl pt-8 pb-8 pr-9 pl-9 border-2 border-y-red-400 border-x-purple-400"
+        className="w-1/4 bg-transparent backdrop-filter backdrop-blur-lg text-white rounded-xl pt-8 pb-8 pr-9 pl-9 border-2 border-y-red-400 border-x-purple-400"
       >
         <form>
           <h1 className="text-3xl text-center ">SignUp</h1>
@@ -38,7 +38,7 @@ const SignUp = () => {
             />
             <FaUser
               class="icon "
-              className="absolute right-[43%] top-2/ -translate-y-11"
+              className="absolute right-[12%] top-2/ -translate-y-11"
             />
           </div>
           <div className="w-full h-16 my-8">
@@ -50,7 +50,7 @@ const SignUp = () => {
             />
             <IoMailUnreadSharp
               class="icon "
-              className="absolute right-[43%] top-2/ -translate-y-11"
+              className="absolute right-[12%] top-2/ -translate-y-11"
             />
           </div>
 
@@ -63,7 +63,7 @@ const SignUp = () => {
             ></input>
             <FaUnlock
               class="icon "
-              className="absolute right-[43%] top-2/ -translate-y-11"
+              className="absolute right-[12%] top-2/ -translate-y-11"
             />
           </div>
           <div className="w-full h-16 my-8">
@@ -75,7 +75,7 @@ const SignUp = () => {
             ></input>
             <FaUnlock
               class="icon "
-              className="absolute right-[43%] top-2/ -translate-y-11"
+              className="absolute right-[12%] top-2/ -translate-y-11"
             />
           </div>
 
