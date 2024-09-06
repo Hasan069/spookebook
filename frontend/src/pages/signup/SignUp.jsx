@@ -1,5 +1,6 @@
 import { FaUser, FaUnlock } from "react-icons/fa";
 import { IoMailUnreadSharp } from "react-icons/io5";
+import GenderCheckbox from "./GenderCheckbox";
 const SignUp = () => {
   return (
     <body className="font-semibold m-0 p-0 box-border flex justify-center items-center min-h-screen bg-cover bg-center  ">
@@ -14,17 +15,13 @@ const SignUp = () => {
             <div className="w-full h-16 mt-2 pr-1">
               <input
                 type="text"
-                placeholder="First Name"
+                placeholder="Full Name"
                 required
                 className="relative w-full h-full bg-transparent border-solid border-2 divide-red-400 rounded-3xl placeholder:text-white text-base pt-5 pr-11 pb-5 pl-5"
               />
-            </div>
-            <div className="w-full h-16 mt-2 px-1">
-              <input
-                type="text"
-                placeholder="Last Name"
-                required
-                className="relative w-full h-full bg-transparent border-solid border-2 divide-red-400 rounded-3xl placeholder:text-white text-base pt-5 pr-11 pb-5 pl-5"
+              <FaUser
+                class="icon "
+                className="absolute right-[12%] top-2/ -translate-y-11"
               />
             </div>
           </div>
@@ -32,7 +29,7 @@ const SignUp = () => {
           <div className="w-full h-16 my-8">
             <input
               type="text"
-              placeholder="username"
+              placeholder="Username"
               required
               className="relative w-full h-full bg-transparent border-solid border-2 divide-red-400 rounded-3xl placeholder:text-white text-base pt-5 pr-11 pb-5 pl-5"
             />
@@ -79,33 +76,14 @@ const SignUp = () => {
             />
           </div>
 
+          <GenderCheckbox/>
+
           <button
             type="submit"
-            className="w-full h-11 bg-white border-none outline-none text-gray-700 rounded-3xl shadow-sm cursor-pointer font-semibold "
+            className="my-3 w-full h-11 bg-white border-none outline-none text-gray-700 rounded-3xl shadow-sm cursor-pointer font-semibold "
           >
             Register
           </button>
-
-          <div className="gender flex m-4 gap-5">
-            <div className="form-control">
-              <label className="label gap-2 cursor-pointer">
-                <span className="label-text">Male </span>
-                <input
-                  type="checkbox"
-                  className="h-6 w-6 border-2 border-white rounded-3xl"
-                />
-              </label>
-            </div>
-            <div className="form-control">
-              <label className="label gap-2 cursor-pointer">
-                <span className="label-text ">Female </span>
-                <input
-                  type="checkbox"
-                  className="h-6 w-6 border-2 border-white rounded-3xl"
-                />
-              </label>
-            </div>
-          </div>
 
           <div class="signup-with-facebook-google" className="flex m-2}">
             <div class="items-center justify-center h-1">
