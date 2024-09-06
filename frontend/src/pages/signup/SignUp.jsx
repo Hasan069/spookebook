@@ -1,30 +1,46 @@
 import { FaUser, FaUnlock } from "react-icons/fa";
-import { IoMailUnreadSharp } from "react-icons/io5";
 import GenderCheckbox from "./GenderCheckbox";
 import { Link } from "react-router-dom";
+import { useState } from "react";
+import useSignup from "../../hooks/useSignup";
 
 const SignUp = () => {
+  const [inputs, setInputs] = useState({
+    fullName: "",
+    username: "",
+    password: "",
+    confirmPassword: "",
+    gender: "",
+  });
+
+  const { loading, signup } = useSignup();
+
+  const handleCheckboxChange = (gender) => {
+    setInputs({ ...inputs, gender });
+  };
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    await signup(inputs);
+  };
   return (
-    <body className="w-full font-semibold m-0 p-0 box-border flex justify-center items-center min-h-screen bg-cover bg-center  ">
-      <div
-        class="wrapper"
-        className="w-1/4 bg-transparent backdrop-filter backdrop-blur-lg text-white rounded-xl pt-8 pb-8 pr-9 pl-9 border-2 border-y-red-400 border-x-purple-400"
-      >
-        <form>
+    <div className="w-full font-semibold m-0 p-0 box-border flex justify-center items-center min-h-screen bg-cover bg-center  ">
+      <div className=" w-1/4 bg-transparent backdrop-filter backdrop-blur-lg text-white rounded-xl pt-8 pb-8 pr-9 pl-9 border-2 border-y-red-400 border-x-purple-400">
+        <form onSubmit={handleSubmit}>
           <h1 className="text-3xl text-center ">SignUp</h1>
 
-          <div class="" className="flex">
+          <div className="flex">
             <div className="w-full h-16 mt-2 pr-1">
               <input
                 type="text"
                 placeholder="Full Name"
                 required
                 className="relative w-full h-full bg-transparent border-solid border-2 divide-red-400 rounded-3xl placeholder:text-white text-base pt-5 pr-11 pb-5 pl-5"
+                value={inputs.fullName}
+                onChange={(e) => {
+                  setInputs({ ...inputs, fullName: e.target.value });
+                }}
               />
-              <FaUser
-                class="icon "
-                className="absolute right-[12%] top-2/ -translate-y-11"
-              />
+              <FaUser className=" icon absolute right-[12%] top-2/ -translate-y-11" />
             </div>
           </div>
 
@@ -34,23 +50,12 @@ const SignUp = () => {
               placeholder="Username"
               required
               className="relative w-full h-full bg-transparent border-solid border-2 divide-red-400 rounded-3xl placeholder:text-white text-base pt-5 pr-11 pb-5 pl-5"
+              value={inputs.username}
+              onChange={(e) => {
+                setInputs({ ...inputs, username: e.target.value });
+              }}
             />
-            <FaUser
-              class="icon "
-              className="absolute right-[12%] top-2/ -translate-y-11"
-            />
-          </div>
-          <div className="w-full h-16 my-8">
-            <input
-              type="text"
-              placeholder="Email"
-              required
-              className="relative w-full h-full bg-transparent border-solid border-2 divide-red-400 rounded-3xl placeholder:text-white text-base pt-5 pr-11 pb-5 pl-5"
-            />
-            <IoMailUnreadSharp
-              class="icon "
-              className="absolute right-[12%] top-2/ -translate-y-11"
-            />
+            <FaUser className="icon absolute right-[12%] top-2/ -translate-y-11" />
           </div>
 
           <div className="w-full h-16 my-8">
@@ -59,11 +64,12 @@ const SignUp = () => {
               placeholder="Create password"
               required
               className=" relative w-full h-full bg-transparent border-solid border-2 divide-red-400 rounded-3xl placeholder:text-white text-base pt-5 pr-11 pb-5 pl-5"
-            ></input>
-            <FaUnlock
-              class="icon "
-              className="absolute right-[12%] top-2/ -translate-y-11"
+              value={inputs.password}
+              onChange={(e) => {
+                setInputs({ ...inputs, password: e.target.value });
+              }}
             />
+            <FaUnlock className=" icon absolute right-[12%] top-2/ -translate-y-11" />
           </div>
           <div className="w-full h-16 my-8">
             <input
@@ -71,14 +77,18 @@ const SignUp = () => {
               placeholder="Confirm password"
               required
               className=" relative w-full h-full bg-transparent border-solid border-2 divide-red-400 rounded-3xl placeholder:text-white text-base pt-5 pr-11 pb-5 pl-5"
-            ></input>
-            <FaUnlock
-              class="icon "
-              className="absolute right-[12%] top-2/ -translate-y-11"
+              value={inputs.confirmPassword}
+              onChange={(e) => {
+                setInputs({ ...inputs, confirmPassword: e.target.value });
+              }}
             />
+            <FaUnlock className="icon absolute right-[12%] top-2/ -translate-y-11" />
           </div>
 
-          <GenderCheckbox />
+          <GenderCheckbox
+            onCheckboxChange={handleCheckboxChange}
+            selectedGender={inputs.gender}
+          />
 
           <button
             type="submit"
@@ -87,11 +97,11 @@ const SignUp = () => {
             Register
           </button>
 
-          <div class="signup-with-facebook-google" className="flex m-2}">
-            <div class="items-center justify-center h-1">
-              <button class=" px-4 py-2 border flex gap-2 border-slate-200 dark:border-slate-700 rounded-lg text-slate-700 dark:text-slate-200 hover:border-slate-400 dark:hover:border-slate-500  hover:shadow transition duration-150 hover:bg-white hover:text-black">
+          <div className="flex m-2}">
+            <div className=" signup-with-facebook-google items-center justify-center h-1">
+              <button className=" px-4 py-2 border flex gap-2 border-slate-200 dark:border-slate-700 rounded-lg text-slate-700 dark:text-slate-200 hover:border-slate-400 dark:hover:border-slate-500  hover:shadow transition duration-150 hover:bg-white hover:text-black">
                 <img
-                  class="w-6 h-10"
+                  className="w-6 h-10"
                   src="https://www.svgrepo.com/show/475656/google-color.svg"
                   loading="lazy"
                   alt="google logo"
@@ -101,13 +111,13 @@ const SignUp = () => {
             </div>
             <button
               type="button"
-              class="py-2 px-4 w-auto border border-slate-700 flex justify-center items-center  hover:bg-white hover:text-black focus:ring-blue-500 focus:ring-offset-blue-200 text-white transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 rounded-lg"
+              className="py-2 px-4 w-auto border border-slate-700 flex justify-center items-center  hover:bg-white hover:text-black focus:ring-blue-500 focus:ring-offset-blue-200 text-white transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 rounded-lg"
             >
               <svg
                 width="20"
                 height="20"
                 fill="currentColor"
-                class="mr-2"
+                className="mr-2"
                 viewBox="0 0 1792 1792"
                 color="blue"
                 xmlns="http://www.w3.org/2000/svg"
@@ -118,20 +128,21 @@ const SignUp = () => {
             </button>
           </div>
 
-          <div
-            class="register-link"
-            className="text-sm text-center mt-5 mr-0 ml-0 mb-4 "
-          >
+          <div className=" register-link text-sm text-center mt-5 mr-0 ml-0 mb-4 ">
             <p className="to-white decoration-none font-semibold ">
               Already have an accout?{" "}
-              <Link to={"/login"} className="hover:underline decoration-1" href="#">
+              <Link
+                to={"/login"}
+                className="hover:underline decoration-1"
+                href="#"
+              >
                 Login
               </Link>
             </p>
           </div>
         </form>
       </div>
-    </body>
+    </div>
   );
 };
 
