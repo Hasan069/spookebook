@@ -1,4 +1,5 @@
 import { FaUser, FaUnlock } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const Login = () => {
   return (
@@ -59,10 +60,10 @@ const Login = () => {
             className="text-sm text-center mt-5 mr-0 ml-0 mb-4 "
           >
             <p className="to-white decoration-none font-semibold ">
-              Don't Have an accout?
-              <a className="hover:underline decoration-1" href="#">
+             { "Don't"} Have an accout?
+              <Link to={"/signup"} className="hover:underline decoration-1" href="#">
                 Register
-              </a>
+              </Link>
             </p>
           </div>
         </form>

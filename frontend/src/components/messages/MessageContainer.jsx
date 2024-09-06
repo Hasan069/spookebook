@@ -3,7 +3,7 @@ import MessageInput from "../messages/MessageInput";
 import { TiMessages } from "react-icons/ti";
 
 const MessegeContainer = () => {
-  const noChatSelected = true;
+  const noChatSelected = false;
   return (
     <div className="flex flex-col min-w-[450px]">
       {noChatSelected ? (

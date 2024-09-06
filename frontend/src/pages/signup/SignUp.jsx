@@ -1,9 +1,11 @@
 import { FaUser, FaUnlock } from "react-icons/fa";
 import { IoMailUnreadSharp } from "react-icons/io5";
 import GenderCheckbox from "./GenderCheckbox";
+import { Link } from "react-router-dom";
+
 const SignUp = () => {
   return (
-    <body className="font-semibold m-0 p-0 box-border flex justify-center items-center min-h-screen bg-cover bg-center  ">
+    <body className="w-full font-semibold m-0 p-0 box-border flex justify-center items-center min-h-screen bg-cover bg-center  ">
       <div
         class="wrapper"
         className="w-1/4 bg-transparent backdrop-filter backdrop-blur-lg text-white rounded-xl pt-8 pb-8 pr-9 pl-9 border-2 border-y-red-400 border-x-purple-400"
@@ -76,7 +78,7 @@ const SignUp = () => {
             />
           </div>
 
-          <GenderCheckbox/>
+          <GenderCheckbox />
 
           <button
             type="submit"
@@ -122,9 +124,9 @@ const SignUp = () => {
           >
             <p className="to-white decoration-none font-semibold ">
               Already have an accout?{" "}
-              <a className="hover:underline decoration-1" href="#">
+              <Link to={"/login"} className="hover:underline decoration-1" href="#">
                 Login
-              </a>
+              </Link>
             </p>
           </div>
         </form>
