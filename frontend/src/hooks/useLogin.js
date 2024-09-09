@@ -25,6 +25,7 @@ const useLogin = () => {
     } catch (error) {
       toast.error(error.message);
     } finally {
+      setLoading(false);
     }
   };
 
