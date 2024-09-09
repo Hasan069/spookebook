@@ -1,15 +1,19 @@
 import { useState } from "react";
 import { FaUser, FaUnlock } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import {login} from "../../hooks/useLogin"
 
 const Login = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    await login(username, password);
+  };
   return (
     <body className="font-Roboto font-semibold m-0 p-0 box-border flex justify-center items-center min-h-screen bg-cover bg-center bg-no-repeat ">
       <div className="wrapper w-96 backdrop-filter backdrop-blur-lg text-white rounded-xl pt-8 pb-8 pr-9 pl-9 border-2  border-orange-800">
-        <form>
+        <form onSubmit={handleSubmit}>
           <h1 className="text-3xl text-center ">Login</h1>
 
           <div className="w-full h-16 my-8">
@@ -30,6 +34,8 @@ const Login = () => {
               placeholder="Password"
               required
               className=" relative w-full h-full bg-transparent border-solid border-2 border-orange-800 rounded-3xl placeholder:text-white text-base pt-5 pr-11 pb-5 pl-5"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
             ></input>
             <FaUnlock className="absolute right-[15%] top-2/ -translate-y-10 hover:text-orange-800" />
           </div>
