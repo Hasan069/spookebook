@@ -11,7 +11,7 @@ const useGetConversations = () => {
       try {
         const res = await fetch("api/user");
         const data = await res.json();
-        
+
         if (data.error) {
           throw new error(data.error);
         }
