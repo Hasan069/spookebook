@@ -1,6 +1,11 @@
 import avatar from "../../assets/avatar.jpeg";
+import { useAuthContext } from "../../context/AuthContext";
 
-const Message = () => {
+const Message = (message) => {
+
+  const {authUser} = useAuthContext();
+  
+
   return (
     <div>
       <div className="flex gap-2 items-center rounded-2xl p-2 py-4 cursor-pointer ">
