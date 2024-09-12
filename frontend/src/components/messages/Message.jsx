@@ -1,12 +1,14 @@
 import avatar from "../../assets/avatar.jpeg";
 import { useAuthContext } from "../../context/AuthContext";
+import { extractTime } from "../../utils/extractTime";
 import useConversation from "../../zustand/useConversation";
 
 const Message = ({ message }) => {
   const { authUser } = useAuthContext();
   const { selectedConversation } = useConversation();
+  const formattedTime = extractTime(message.createdAt);
   const fromMe = message.senderId === authUser._id;
-  const chatClassName = fromMe ? "item-end" : "item-end";
+  const chatClassName = fromMe ? "flex justify-end items-end" : "item-start";
   const profilePic = fromMe
     ? authUser.profilePic
     : selectedConversation?.profilePic;
@@ -23,8 +25,10 @@ const Message = ({ message }) => {
         >
           {message.message}
         </div>
-        <span className="text-sm font-normal  dark:text-gray-400">11:46</span>
       </div>
+      <span className="pr-3 flex justify-end text-sm font-normal dark:text-gray-400">
+        {formattedTime}
+      </span>
     </>
   );
 };
