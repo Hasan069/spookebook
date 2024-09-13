@@ -13,6 +13,8 @@ const Message = ({ message }) => {
     ? authUser.profilePic
     : selectedConversation?.profilePic;
   const bubbleBgColor = fromMe ? "bg-orange-800" : " ";
+  const shakeClass = message.shouldShake ? "shake" : "";
+
 
   return (
     <>
@@ -21,7 +23,7 @@ const Message = ({ message }) => {
           <img src={profilePic} alt="Avatar" className="rounded-full" />
         </div>
         <div
-          className={`bg-gray-200 text-gray-800 p-3 rounded-lg max-w-xs ${bubbleBgColor}`}
+          className={`bg-gray-200 text-gray-800 p-3 rounded-lg max-w-xs  ${bubbleBgColor} ${shakeClass} `}
         >
           {message.message}
         </div>

@@ -1,11 +1,15 @@
 import React from "react";
 import avatar from "../../assets/avatar.jpeg";
 import useConversation from "../../zustand/useConversation";
+import { useSocketContext } from "../../context/SocketContext";
+import OnlineStatus from "./OnlineStatus";
 
 const Conversation = ({ conversation, lastIdx }) => {
   const { setSelectedConversation, selectedConversation } = useConversation();
 
   const isSelected = selectedConversation?._id === conversation._id;
+  const { onlineUsers } = useSocketContext();
+  const isOnline = onlineUsers.includes(conversation._id);
 
   return (
     <>
@@ -15,14 +19,15 @@ const Conversation = ({ conversation, lastIdx }) => {
       `}
         onClick={() => setSelectedConversation(conversation)}
       >
-        <div className="avatar">
-          <div className="  w-14 rounded-full ring-inset-2 ring-2 ring-orange-800  relative">
+        <div className={`avatar`}>
+          <div
+            className={`w-14 rounded-full ring-inset-2 ring-2 ring-orange-800  relative`}
+          >
             <img
               src={conversation.profilePic}
               alt="Avatar"
               className="rounded-full"
             />
-            <span className="absolute top-0 left-9 transform -translate-y-1/2 w-3.5 h-3.5 bg-green-400 border-2 border-white dark:border-gray-800 rounded-full"></span>
           </div>
         </div>
         <div className="flex flex-col flex-1 ">
@@ -48,3 +53,16 @@ export default Conversation;
   /* <img src={avatar} alt="Avatar" className="rounded-full" />
             <span class="absolute top-0 left-9 transform -translate-y-1/2 w-3.5 h-3.5 bg-green-400 border-2 border-white dark:border-gray-800 rounded-full"></span> */
 }
+
+// ${isOnline ? (
+//   <span className="absolute top-0 left-9 transform -translate-y-1/2 w-3.5 h-3.5 bg-green-400 border-2 border-white dark:border-gray-800 rounded-full"></span>
+// ) : (
+//   ""
+// )
+// }
+
+/* <span className="absolute top-0 left-9 transform -translate-y-1/2 w-3.5 h-3.5 bg-green-400 border-2 border-white dark:border-gray-800 rounded-full"></span> */
+
+// ${
+//   isOnline ? OnlineStatus : ""
+// }
